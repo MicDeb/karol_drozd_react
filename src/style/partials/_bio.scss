@@ -1,0 +1,98 @@
+.biography-article {
+  font-size: 1.4rem;
+}
+
+.biography-article__name {
+  @include sectionName;
+}
+
+.biography-article__figure {
+  padding-bottom: 2rem;
+}
+
+.biography-article__figure--image {
+  @include circuit;
+}
+
+.paragraph,
+.biography-article--jobs-list {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 1.2rem;
+}
+
+.biography-article--education,
+.biography-article--awards,
+.biography-article--another,
+.biography-article--jobs-list {
+  @include borderBottom;
+}
+
+.biography-article--jobs-list {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+.biography-article--jobs-list--item {
+  margin-bottom: 3rem;
+}
+
+.biography-article--awards {
+  padding-top: 1.2rem;
+}
+
+@media only screen and (min-width: 480px) and (orientation: landscape) {
+  .biography-article__figure {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .paragraph,
+  .biography-article--jobs-list {
+    width: 80%;
+    margin: 0 auto 3rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main__container.biography {
+    padding: 7rem 2rem;
+  }
+  .biography-article__name {
+    @include sectionNameDesktop;
+  }
+  .biography-article__figure {
+    padding-bottom: 4rem;
+  }
+
+  .paragraph,
+  .biography-article--jobs-list {
+    width: 80%;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    margin: 0 auto 5rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .biography-article {
+    width: 50%;
+    margin: 0 35%;
+  }
+
+  .paragraph,
+  .biography-article--jobs-list {
+    width: 100%;
+    font-size: 1.6rem;
+    margin: 1.5rem 0;
+  }
+
+  .biography-article--jobs-list--item {
+    margin-bottom: 1.5rem;
+  }
+
+  .biography-article__figure--image {
+    padding-top: 2.5rem;
+  }
+}

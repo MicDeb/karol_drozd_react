@@ -1,0 +1,92 @@
+.header {
+  @include circuit;
+  background-color: $backgroundColor;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+}
+
+.header__container {
+  @include circuit;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-logo {
+  font-size: 2.8rem;
+  font-family: $headerFontFamily;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page-logo--title {
+  animation: logoEffect 2s forwards;
+}
+.page-logo--sub-title {
+  font-size: 1.2rem;
+  font-family: $mainFontFamily;
+  z-index: 10;
+}
+
+.profesion-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-logo--sub-title:nth-child(1) {
+  animation: profesionEffect 6s forwards;
+}
+.page-logo--sub-title:nth-child(2) {
+  animation: profesionEffect 4.5s forwards;
+}
+.page-logo--sub-title:nth-child(3) {
+  animation: profesionEffect 3s forwards;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__container {
+    padding: 3rem 5rem;
+  }
+
+  .page-logo {
+    font-size: 4rem;
+  }
+
+  .page-logo--sub-title {
+    font-size: 2rem;
+  }
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    width: auto;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    text-align: left;
+    border-right: 0.1rem solid $borderColor;
+  }
+  .header__container {
+    width: auto;
+    height: auto;
+    padding: 5rem;
+  }
+
+  .page-logo {
+    border-bottom: 0.1rem solid $borderColor;
+  }
+  .profesion-container {
+    width: 100%;
+    height: auto;
+  }
+  .page-logo--sub-title {
+    font-size: 1.8rem;
+  }
+}

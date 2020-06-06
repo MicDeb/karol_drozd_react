@@ -1,0 +1,113 @@
+.calendar-table {
+  table-layout: initial;
+  font-size: 1.3rem;
+  font-weight: $light;
+  @include circuit;
+}
+
+.calendar-table__caption {
+  font-size: 3rem;
+}
+
+.calendar-table__body--mounth {
+  font-size: 2rem;
+  display: block;
+  margin: 2rem 0;
+  th {
+    font-weight: $light;
+    @include circuit;
+    text-align: left;
+  }
+}
+
+.calendar-table__body--event {
+  td {
+    text-align: center;
+  }
+}
+
+.calendar-table__body--title {
+  text-align: center;
+}
+
+.calendar-table__body--place {
+  text-align: center;
+}
+
+td {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.even {
+   background-color: #2B2A2B;
+   a {
+     border-bottom: thin solid $borderColor;
+   }
+}
+
+.odd {
+  color: $fontColor;
+  background-color: #2B2A2B;
+  a {
+    border-bottom: thin solid $borderColor;
+  }
+}
+
+.calendar-figure {
+  margin-top: 3rem;
+  @include circuit;
+  .calendar-figure--image {
+    @include circuit;
+  }
+  .calendar-figure--caption {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main__container.calendar {
+    padding: 7rem 2rem;
+  }
+  .calendar-table {
+    font-size: 2rem;
+  }
+
+  .calendar-table__caption {
+    @include sectionNameDesktop;
+  }
+
+  .calendar-table__body--mounth {
+    font-size: 3rem;
+    display: block;
+    margin: 3rem 0;
+    th {
+      font-weight: $light;
+      @include circuit;
+      text-align: left;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main__container.calendar {
+    width: 50%;
+    margin: 0 35%;
+  }
+  .calendar-table {
+    font-size: 1.6rem;
+  }
+
+  .calendar-table__body--mounth {
+    width: 200%;
+  }
+
+  .calendar-table__body--place {
+    a {
+      color: #B48E3C;
+    }
+    a:hover {
+      color: $fontColor;
+    }
+  }
+}

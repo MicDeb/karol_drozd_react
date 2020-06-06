@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  background: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  background-color: $backgroundColor;
+}
+
+body {
+  font-family: $mainFontFamily;
+  font-weight: $light;
+  color: $fontColor;
+}
+
+main {
+  display: block;
+  padding-top: 7rem;
+  animation: backgroudEffect 3s forwards;
+}
+
+.main__container {
+  padding: 2rem 2rem;
+}
+
+h1,
+h2 {
+  display: none;
+}
+
+h3,
+h4 {
+  font-weight: $light;
+}
+
+ul {
+  -webkit-padding-start: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $fontColor;
+}
+
+img {
+ @include circuit;
+}
+
+strong {
+  font-weight: $light;
+}

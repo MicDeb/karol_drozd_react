@@ -1,0 +1,25 @@
+.portfolio-gallery {
+  display: flex;
+  justify-content: center;
+
+  figure {
+    padding: 1rem;
+
+    img {
+      margin-bottom: 1rem;
+    }
+
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .portfolio-gallery {
+    figure {
+      padding: 3rem;
+
+      figcaption {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

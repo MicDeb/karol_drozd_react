@@ -1,0 +1,133 @@
+// logo effects
+@keyframes logoEffect {
+  from {
+    transform: translateY(-3rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoSubEffect {
+  from {
+    transform: translateY(3rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+// navigation effects Mobile
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -110%, 0);
+  }
+
+  to {
+    opacity: 0.9;
+    transform: none;
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+// navigation effects Desktop
+
+@keyframes navigationEffect {
+  from {
+    transform: translateX(-100rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes borderNavigationEffect {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+// profesion effects
+@keyframes profesionEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+// socialMedia effects Mobile
+
+@keyframes socialMediaEffectMobile {
+  from {
+    transform: translateX(100rem);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+
+// socialMedia effect Desktop
+
+@keyframes socialMediaEffect {
+  from {
+    transform: translateX(100rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes borderSocialEffect {
+  from {
+    height: 0;
+  }
+  to {
+    height: 6rem;
+  }
+}
+
+// home page background effect Desktop
+@keyframes backgroudEffect {
+  from {
+    opacity: 0.01;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// gallery effects
+@keyframes imageEffectIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes imageEffectOut {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}

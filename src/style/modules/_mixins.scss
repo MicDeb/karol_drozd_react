@@ -1,0 +1,20 @@
+// mobile section name
+@mixin sectionName {
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 2.5rem;
+}
+
+@mixin sectionNameDesktop {
+  font-size: 5rem;
+  padding-bottom: 3rem;
+}
+
+@mixin circuit {
+  width: 100%;
+  height: auto;
+}
+
+@mixin borderBottom {
+  border-bottom: 0.1rem solid $borderColor;
+}

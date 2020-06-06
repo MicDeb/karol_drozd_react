@@ -1,0 +1,20 @@
+// modules
+@import "modules/colors";
+@import "modules/typography";
+@import "modules/mixins";
+
+// partials
+@import "partials/reset";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/homePage";
+@import "partials/navigation";
+@import "partials/bio";
+@import "partials/calendar";
+@import "partials/gallery";
+@import "partials/contact";
+@import "partials/portfolio";
+@import "partials/animations";
+@import "partials/socialMediaIcons";
+// vendor
+@import "vendor/hamburger";

@@ -1,0 +1,110 @@
+.main-navigation__list {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  padding: 5rem 0;
+  font-size: 3rem;
+  font-family: $mainFontFamily;
+  background-color: $navigationBackgroudColor;
+  display: block;
+  transform: translate3d(0, -200%, 0);
+}
+
+.main-navigation__list--item {
+  padding: 1rem 0;
+  a:hover {
+    color: #ada9ad;
+  }
+}
+
+.navigation-animation-in {
+  animation: fadeInDown 2s forwards;
+}
+
+.navigation-animation-out {
+  animation: fadeOutDown 2s forwards;
+}
+
+.show-navigation-list {
+  display: block;
+}
+@media only screen and (min-width: 480px) and (orientation: landscape) {
+  .main-navigation__list {
+    padding: 1.5rem 0;
+    font-size: 2rem;
+  }
+  .main-navigation__list--item {
+    padding: 1rem 0 0;
+  }
+}
+@media only screen and (min-width: 800px) and (min-height: 375px) {
+  .main-navigation__list {
+    padding: 1.5rem 0;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main-navigation__hamburger {
+    display: none;
+  }
+  .main-navigation__list {
+    display: block;
+    width: 0;
+    height: auto;
+    font-size: 2rem;
+    background-color: transparent;
+    text-align: left;
+    padding: 7rem 0;
+    margin-left: 5rem;
+    border-bottom: 0.1rem solid $borderColor;
+    transform: translate3d(0, 0, 0);
+    animation: borderNavigationEffect 3s forwards,
+                navigationEffect 1.5s forwards;
+  }
+  .main-navigation__list--item {
+    padding-bottom: 2.5rem;
+  }
+  .main-navigation__list--item:nth-child(1) {
+    animation: navigationEffect 2s forwards;
+  }
+  .main-navigation__list--item:nth-child(2) {
+    animation: navigationEffect 2.1s forwards;
+  }
+  .main-navigation__list--item:nth-child(3) {
+    animation: navigationEffect 2.2s forwards;
+  }
+  .main-navigation__list--item:nth-child(4) {
+    animation: navigationEffect 2.3s forwards;
+  }
+  .main-navigation__list--item:nth-child(5) {
+    animation: navigationEffect 2.4s forwards;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (min-height: 600px){
+  .main-navigation__list--item {
+    padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (min-height: 768px) {
+  .main-navigation__list {
+    font-size: 2.5rem;
+    padding: 14rem 0;
+  }
+  .main-navigation__list--item {
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .main-navigation__list {
+    font-size: 2.7rem;
+    padding: 20rem 0;
+  }
+}
