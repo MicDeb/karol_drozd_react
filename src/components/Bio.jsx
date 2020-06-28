@@ -60,68 +60,64 @@ export function Bio() {
     ];
 
     return (
-        <main className="main">
-            <h2>KAROL DROZD - BIOGRAFIA</h2>
-            <div className="main__container biography">
-                <article className="biography-article">
-                    <h3 className="biography-article__name">BIOGRAFIA</h3>
+        <div className="main-container">
+            <div className="biography">
+                <h3 className="biography__title">BIOGRAFIA</h3>
 
-                    <Figure
-                        figureClass='biography-article__figure'
-                        imageClass='biography-article__figure--image'
-                        imageSrc={require('../images/poza/Karol-Drozd-poza1.jpg')}
-                        imageAlt='Karol Drozd'
-                    />
+                <Figure
+                    figureClass='biography__figure'
+                    imageClass='biography__figure--image'
+                    imageSrc={require('../images/poza/Karol-Drozd-poza1.jpg')}
+                    imageAlt='Karol Drozd'
+                />
 
-                    <p className="biography-article--education paragraph">
-                        Absolwent <strong>Akademii Muzycznej im. Stanisława Moniuszki w Gdańsku</strong> na specjalności
-                        musical.
-                        Swój warsztat wokalny kształcił pod okiem prof. zw. dra hab. Ryszarda Minkiewicza.
-                        Studia muzyczne pierwszego stopnia ukończył z wyróżnieniem.
-                    </p>
-                    <p className="biography-article--jobs paragraph">
-                        Aktor scen musicalowych w Polsce i za granicą.
-                        Doświadczenie sceniczne zdobywa biorąc udział w musicalach i spektaklach muzycznych
-                        takich jak:
-                    </p>
-                    <ul className="biography-article--jobs-list">
-                        {roles.map((role) => (
-                            <li key={role.title} className="biography-article--jobs-list--item">
-                                - “{role.title}” – {role.role} (reż. {role.director}), {role.theater}
-                            </li>
-                        ))}
-                    </ul>
+                <p className="biography__paragraph">
+                    Absolwent <strong>Akademii Muzycznej im. Stanisława Moniuszki w Gdańsku</strong> na specjalności
+                    musical.
+                    Swój warsztat wokalny kształcił pod okiem prof. zw. dra hab. Ryszarda Minkiewicza.
+                    Studia muzyczne pierwszego stopnia ukończył z wyróżnieniem.
+                </p>
+                <p className="biography__paragraph">
+                    Aktor scen musicalowych w Polsce i za granicą.
+                    Doświadczenie sceniczne zdobywa biorąc udział w musicalach i spektaklach muzycznych
+                    takich jak:
+                </p>
+                <ul className="biography__paragraph biography__paragraph--jobs-list">
+                    {roles.map((role) => (
+                        <li key={role.title} className="biography__paragraph--jobs-list--item">
+                            - “{role.title}” – {role.role} (reż. {role.director}), {role.theater}
+                        </li>
+                    ))}
+                </ul>
 
-                    <Figure
-                        figureClass='biography-article__figure'
-                        imageClass='biography-article__figure--image'
-                        imageSrc={require('../images/poza/Karol-Drozd-poza3.jpg')}
-                        imageAlt='Karol Drozd'
-                    />
+                <Figure
+                    figureClass='biography__figure'
+                    imageClass='biography__figure--image'
+                    imageSrc={require('../images/poza/Karol-Drozd-poza3.jpg')}
+                    imageAlt='Karol Drozd'
+                />
 
-                    <p className="biography-article--awards paragraph">
-                        Zdobywca najwyższej klasy tanecznej w Polsce w tańcach latynoamerykańskich i standardowych.
-                        Trzykrotny Mistrz Polski i dwukrotny półfinalista Mistrzostw Świata z formacją latynoamerykańską
-                        Takt Chadek Chełm.
-                        Współpracował z choraografami takimi jak:
-                        <strong>Jarosław Staniek</strong>, <strong>Ewelina Adamska-Porczyk</strong>,
-                        <strong>Joanna Semeńczuk</strong>, <strong>Neva Howard.</strong>
-                    </p>
-                    <p className="biography-article--another paragraph">
-                        Od 2015 roku instruktor tańca i choreograf w fundacji <strong>MUSICAMP</strong>,
-                        której celem jest kształcenie młodych talentów poprzez organizowanie
-                        warsztatów musicalowych oraz koncertów tym samym rozpowszechniając musical w Polsce.
-                    </p>
+                <p className="biography__paragraph">
+                    Zdobywca najwyższej klasy tanecznej w Polsce w tańcach latynoamerykańskich i standardowych.
+                    Trzykrotny Mistrz Polski i dwukrotny półfinalista Mistrzostw Świata z formacją latynoamerykańską
+                    Takt Chadek Chełm.
+                    Współpracował z choraografami takimi jak:
+                    <strong>Jarosław Staniek</strong>, <strong>Ewelina Adamska-Porczyk</strong>,
+                    <strong>Joanna Semeńczuk</strong>, <strong>Neva Howard.</strong>
+                </p>
+                <p className="biography__paragraph">
+                    Od 2015 roku instruktor tańca i choreograf w fundacji <strong>MUSICAMP</strong>,
+                    której celem jest kształcenie młodych talentów poprzez organizowanie
+                    warsztatów musicalowych oraz koncertów tym samym rozpowszechniając musical w Polsce.
+                </p>
 
-                    <Figure
-                        figureClass='biography-article__figure'
-                        imageClass='biography-article__figure--image'
-                        imageSrc={require('../images/poza/Karol-Drozd-poza2.jpg')}
-                        imageAlt='Karol Drozd'
-                    />
-
-                </article>
+                <Figure
+                    figureClass='biography__figure'
+                    imageClass='biography__figure--image'
+                    imageSrc={require('../images/poza/Karol-Drozd-poza2.jpg')}
+                    imageAlt='Karol Drozd'
+                />
             </div>
-        </main>
+        </div>
     )
 }
