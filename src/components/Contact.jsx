@@ -1,12 +1,10 @@
 import React from "react";
 
 export function Contact() {
-    return (
-        <main className="main contact">
-            <div className="main__container contact">
-                <h3 className="contact-section-name">KONTAKT</h3>
-                <h4 className="e-mail">info.karoldrozd@gmail.com</h4>
-            </div>
-        </main>
-    )
+  return (
+    <div className="contact">
+      <h3 className="contact__title">KONTAKT</h3>
+      <h4 className="contact__email">info.karoldrozd@gmail.com</h4>
+    </div>
+  )
 }
