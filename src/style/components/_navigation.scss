@@ -35,21 +35,6 @@
 .show-navigation-list {
   display: block;
 }
-@media only screen and (min-width: 480px) and (orientation: landscape) {
-  .main-navigation__list {
-    padding: 1.5rem 0;
-    font-size: 2rem;
-  }
-  .main-navigation__list--item {
-    padding: 1rem 0 0;
-  }
-}
-@media only screen and (min-width: 800px) and (min-height: 375px) {
-  .main-navigation__list {
-    padding: 1.5rem 0;
-    font-size: 2rem;
-  }
-}
 
 @media only screen and (min-width: 1024px) {
   .main-navigation__hamburger {

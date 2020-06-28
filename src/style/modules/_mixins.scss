@@ -30,3 +30,9 @@
   flex-direction: column;
 }
 
+@mixin flex-column-space-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+

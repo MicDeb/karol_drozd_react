@@ -4,17 +4,17 @@ const socialMediaNavItems = [
   {
     href: 'https://www.facebook.com/karol.drozd94/',
     title: 'Facebook',
-    icon: require('../../icons/facebook.svg'),
+    icon: require('../../images/icons/facebook.svg'),
   },
   {
     href: 'https://www.instagram.com/karol.drozd/',
     title: 'Instagram',
-    icon: require('../../icons/instagram.svg'),
+    icon: require('../../images/icons/instagram.svg'),
   },
   {
     href: 'https://www.youtube.com/channel/UCfuWSBOXikmVi1S6H_KM9eA',
     title: 'Youtube',
-    icon: require('../../icons/youtube.svg'),
+    icon: require('../../images/icons/youtube.svg'),
   },
 ];
 

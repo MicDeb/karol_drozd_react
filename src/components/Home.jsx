@@ -1,4 +1,6 @@
 import React from "react";
+import Figure from 'react-bootstrap/Figure'
+import FigureImage from 'react-bootstrap/FigureImage';
 
 export function Home() {
     return (
@@ -6,13 +8,12 @@ export function Home() {
             <h2>Main section</h2>
             <div className="main__container home">
                 <div className="landscape-container">
-                    <figure className="main__figure">
-                        <img
-                            src="images/karol-drozd-main.jpg"
-                            alt="Karol Drozd portret"
-                            className="main__figure--img desktop-large"
-                        />
-                    </figure>
+                  <Figure className="main__figure">
+                    <FigureImage
+                      src={require('../images/karol-drozd-main-black.jpg')}
+                      className='main__figure--item'
+                    />
+                  </Figure>
                 </div>
             </div>
         </main>

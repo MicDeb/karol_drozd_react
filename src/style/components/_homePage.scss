@@ -1,51 +1,21 @@
 .main__container.home {
   padding: 0;
-}
+  height: calc(100vh - 7rem);
 
-.main__figure {
-  width: 100%;
-  height: 100vh;
-  background-color: $backgroundColor;
-}
-
-.main__figure--img {
-  @include circuit;
-}
-
-@media only screen and (min-width: 320px) and (min-height: 560px){
-  .main__figure--img {
-    padding-top: 5%;
-  }
-}
-
-@media only screen and (min-width: 375px) and (min-height: 660px){
-  .main__figure--img {
-    padding-top: 7%;
-  }
-}
-
-@media only screen and (min-width: 375px) and (min-height: 800px){
-  .main__figure--img {
-    padding-top: 15%;
-  }
-}
-
-@media only screen and (min-width: 480px) and (orientation: landscape) {
-  .main__container.home {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .main__figure {
-    width: 100%;
+  .landscape-container {
     height: 100%;
-    text-align: center;
-  }
 
-  .main__figure--img {
-    width: 60%;
+    .main__figure {
+      height: 100%;
+      width: 100vw;
+      overflow: hidden;
+
+      &--item {
+        height: 100%;
+        width: auto;
+        max-width: none;
+      }
+    }
   }
 }
 
