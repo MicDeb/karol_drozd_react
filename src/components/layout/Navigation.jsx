@@ -1,87 +1,94 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { facebookIcon } from "../../icons/facebook.svg";
-import { instagramIcon } from "../../icons/instagram.svg";
-import { youTubeIcon } from "../../icons/youtube.svg";
+import {
+    Button,
+} from 'react-bootstrap';
+import clsx from "clsx";
+
+const navItems = [
+    {
+        href: '/',
+        title: 'Strona główna',
+    },
+    {
+        href: '/biografia',
+        title: 'Biografia',
+    },
+    {
+        href: '/kalendarz',
+        title: 'Kalendarz',
+    },
+    {
+        href: '/galeria',
+        title: 'Galeria',
+    },
+    {
+        href: '/portfolio',
+        title: 'Portfolio',
+    },
+    {
+        href: '/kontakt',
+        title: 'Kontakt',
+    },
+];
 
 export function Navigation() {
-    const navItems = [
-        {
-            href: '/',
-            title: 'Strona główna',
-        },
-        {
-            href: '/biografia',
-            title: 'Biografia',
-        },
-        {
-            href: '/kalendarz',
-            title: 'Kalendarz',
-        },
-        {
-            href: '/galeria',
-            title: 'Galeria',
-        },
-        {
-            href: '/portfolio',
-            title: 'Portfolio',
-        },
-        {
-            href: '/kontakt',
-            title: 'Kontakt',
-        },
-    ];
+    const [isNavOpen, setNavOpen] = useState(0);
 
-    const socialMediaNavItems = [
-        {
-            href: 'https://www.facebook.com/karol.drozd94/',
-            title: 'Facebook',
-            icon: facebookIcon,
-        },
-        {
-            href: 'https://www.instagram.com/karol.drozd/',
-            title: 'Instagram',
-            icon: instagramIcon,
-        },
-        {
-            href: 'https://www.youtube.com/channel/UCfuWSBOXikmVi1S6H_KM9eA',
-            title: 'Youtube',
-            icon: youTubeIcon,
-        },
-    ];
+    const toggleNavOpen = () => {
+        setNavOpen((state) => state + 1);
+    }
+
+    let navAnimationClass = 'main-navigation__list';
+    let hamburgerClass = 'main-navigation__hamburger';
+
+    if (isNavOpen) {
+        if (isNavOpen % 2 !== 0) {
+            navAnimationClass = clsx(navAnimationClass, 'navigation-animation-in');
+            hamburgerClass = clsx(hamburgerClass, 'active');
+        } else {
+            navAnimationClass = clsx(navAnimationClass, 'navigation-animation-out');
+            hamburgerClass = clsx(hamburgerClass);
+        }
+    }
 
     return (
         <header className="header">
             <h1>Karol Drozd</h1>
             <div className="header__container">
                 <div className="page-logo">
-                    <strong className="page-logo--title">Karol Drozd</strong>
-                    <strong className="page-logo--sub-title">aktor - tancerz - wokalista</strong>
+                    <strong className="page-logo__title">Karol Drozd</strong>
+                    <div className='page-logo__professions'>
+                        <strong className="page-logo__professions--item">aktor</strong>
+                        <strong className="page-logo__professions--item">tancerz</strong>
+                        <strong className="page-logo__professions--item">wokalista</strong>
+                    </div>
                 </div>
 
                 <nav className="main-navigation">
-                    <div className="main-navigation__hamburger">
-                        <i></i><i></i><i></i>
-                    </div>
-                    <ul className="main-navigation__list">
+                    <Button
+                      variant="link"
+                      onClick={toggleNavOpen}
+                    >
+                        <div className={hamburgerClass}>
+                            <i></i><i></i><i></i>
+                        </div>
+                    </Button>
+
+                    <ul className={navAnimationClass}>
                         {navItems.map((navItem) => (
                             <li className="main-navigation__list--item" key={navItem.title}>
-                                <Link to={navItem.href} className="main-navigation__list--link">
+                                <Link
+                                  to={navItem.href}
+                                  className="main-navigation__list--link"
+                                  onClick={() => setNavOpen(0)}
+                                >
                                     {navItem.title}
                                 </Link>
                             </li>
                         ))}
                     </ul>
                 </nav>
-
-                <div className="social-media-container">
-                    {socialMediaNavItems.map((item) => (
-                        <a href={item.href} key={item.href}>
-                            {item.icon}
-                        </a>
-                    ))}
-                    <div className="line"></div>
-                </div>
             </div>
         </header>
     );

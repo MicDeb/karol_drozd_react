@@ -1,0 +1,96 @@
+.header {
+  @include circuit;
+  background-color: $backgroundColor;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  height: 9rem;
+
+  &__container {
+    @include circuit;
+    padding: 2rem;
+    @include flex-center-space-between;
+
+    .page-logo {
+      font-size: 2.8rem;
+      font-family: $headerFontFamily;
+      width: auto;
+      @include flex-column;
+
+      &__title {
+        animation: logoEffect 2s forwards;
+      }
+
+      &__professions {
+        @include flex-center-space-between;
+
+        &--item {
+          font-size: 1.2rem;
+          font-family: $mainFontFamily;
+          z-index: 10;
+
+          &:nth-child(1) {
+            animation: profesionEffect 6s forwards;
+          }
+          &:nth-child(2) {
+            animation: profesionEffect 4.5s forwards;
+          }
+          &:nth-child(3) {
+            animation: profesionEffect 3s forwards;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and ($tablet) {
+  .header {
+    &__container {
+      padding: 3rem 5rem;
+
+      .page-logo {
+        font-size: 4rem;
+
+        &__professions {
+          &--item {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and ($desktop) {
+  .header {
+    width: auto;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    text-align: left;
+    border-right: 0.1rem solid $borderColor;
+
+    &__container {
+      width: auto;
+      height: auto;
+      padding: 5rem;
+
+      .page-logo {
+        border-bottom: 0.1rem solid $borderColor;
+
+        &__proffesions {
+          width: 100%;
+          height: auto;
+
+          &--item {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}

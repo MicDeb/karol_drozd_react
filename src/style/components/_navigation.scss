@@ -1,32 +1,35 @@
-.main-navigation__list {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  right: 0;
-  text-align: center;
-  text-decoration: none;
-  padding: 5rem 0;
-  font-size: 3rem;
-  font-family: $mainFontFamily;
-  background-color: $navigationBackgroudColor;
-  display: block;
-  transform: translate3d(0, -200%, 0);
-}
+.main-navigation {
+  &__list {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    padding: 5rem 0;
+    font-size: 3rem;
+    background-color: $navigationBackgroundColor;
+    display: block;
+    transform: translate3d(0, -200%, 0);
 
-.main-navigation__list--item {
-  padding: 1rem 0;
-  a:hover {
-    color: #ada9ad;
+    &--item {
+      padding: 1rem 0;
+      a:hover {
+        color: #ada9ad;
+      }
+    }
   }
-}
 
-.navigation-animation-in {
-  animation: fadeInDown 2s forwards;
-}
+  .navigation-animation-in {
+    animation: fadeInDown 2s forwards;
+  }
 
-.navigation-animation-out {
-  animation: fadeOutDown 2s forwards;
+  .navigation-animation-out {
+    animation: fadeOutDown 2s forwards;
+    transform: translate3d(0, 0, 0);
+  }
+
 }
 
 .show-navigation-list {

@@ -18,3 +18,15 @@
 @mixin borderBottom {
   border-bottom: 0.1rem solid $borderColor;
 }
+
+@mixin flex-center-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+

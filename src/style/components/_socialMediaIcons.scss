@@ -1,0 +1,58 @@
+.social-media-container {
+  position: fixed;
+  bottom: 5%;
+  right: 50%;
+  transform: translateX(50%);
+  border-bottom: 0.1rem solid $borderColor;
+  animation: socialMediaEffectMobile 3s;
+  width: 100px;
+  padding: .5rem;
+  @include flex-center-space-between;
+
+  .social-media-icon {
+    width: 2.2rem;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .line {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .social-media-container {
+    width: auto;
+    height: auto;
+    bottom: 85%;
+    top: 6%;
+    right: 2%;
+    animation: socialMediaEffect 3s forwards;
+
+    .social-media-icon {
+      width: 5.5rem;
+      height: auto;
+      padding: 1rem 0 0.2rem 2rem;
+    }
+    .line {
+      width: auto;
+      border-left: 0.15rem solid $borderColor;
+      position: absolute;
+      top: 20%;
+      transform: translateX(1rem);
+      animation: borderSocialEffect 2s 2s forwards;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) and (min-height: 768px) {
+  .social-media-container {
+    bottom: 87%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .line {
+    top: 30%;
+  }
+}

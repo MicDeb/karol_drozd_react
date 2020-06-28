@@ -1,20 +1,27 @@
+@import "~bootstrap/scss/bootstrap";
+@import './fonts/fonts.css';
+
 // modules
+@import "modules/variables";
 @import "modules/colors";
 @import "modules/typography";
 @import "modules/mixins";
 
-// partials
-@import "partials/reset";
-@import "partials/header";
-@import "partials/footer";
-@import "partials/homePage";
-@import "partials/navigation";
-@import "partials/bio";
-@import "partials/calendar";
-@import "partials/gallery";
-@import "partials/contact";
-@import "partials/portfolio";
-@import "partials/animations";
-@import "partials/socialMediaIcons";
-// vendor
-@import "vendor/hamburger";
+@import "modules/animations";
+
+// components
+@import "components/reset";
+@import "components/header";
+@import "components/navigation";
+@import "components/hamburger";
+
+@import "components/footer";
+
+@import "components/homePage";
+@import "components/bio";
+@import "components/calendar";
+@import "components/gallery";
+@import "components/contact";
+@import "components/portfolio";
+
+@import "components/socialMediaIcons";

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navigation } from './Navigation';
+import { SocialMediaNavigation } from './SocialMediaNavigation';
 
 
 export function MainLayout(props) {
@@ -12,6 +13,8 @@ export function MainLayout(props) {
             <Navigation parent={scene.props.parent} />
 
             {scene}
+
+            <SocialMediaNavigation />
         </div>
     );
 }

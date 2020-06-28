@@ -3,6 +3,11 @@
   background: 0;
   border: 0;
   box-sizing: border-box;
+
+  &:focus {
+    outline: none!important;
+    box-shadow: none!important;
+  }
 }
 
 html {
@@ -14,11 +19,12 @@ body {
   font-family: $mainFontFamily;
   font-weight: $light;
   color: $fontColor;
+  background-color: $backgroundColor;
 }
 
 main {
   display: block;
-  padding-top: 7rem;
+  padding-top: 9rem;
   animation: backgroudEffect 3s forwards;
 }
 
