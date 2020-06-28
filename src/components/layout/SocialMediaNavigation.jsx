@@ -23,7 +23,11 @@ export function SocialMediaNavigation() {
     <div className="social-media-container">
       {socialMediaNavItems.map((item) => (
         <a href={item.href} key={item.href}>
-          <img src={item.icon} className='social-media-icon' />
+          <img
+            src={item.icon}
+            className='social-media-icon'
+            alt={item.title}
+          />
         </a>
       ))}
       <div className="line"></div>

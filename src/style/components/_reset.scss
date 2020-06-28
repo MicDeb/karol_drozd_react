@@ -22,14 +22,14 @@ body {
   background-color: $backgroundColor;
 }
 
-main {
+.main {
   display: block;
   padding-top: 7rem;
   animation: backgroudEffect 3s forwards;
   min-height: 100vh;
 }
 
-.main__container {
+.main-container {
   padding: 2rem 2rem;
 }
 
@@ -56,9 +56,9 @@ a {
   color: $fontColor;
 }
 
-img {
- @include circuit;
-}
+//img {
+// @include circuit;
+//}
 
 strong {
   font-weight: $light;
