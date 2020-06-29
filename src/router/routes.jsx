@@ -4,10 +4,10 @@ import { MainLayout } from '../components/layout/MainLayout';
 
 // import NotFound from '@pages/not-found';
 import { Home } from '../components/Home';
-import { Calendar } from '../components/Calendar';
+import { Calendar } from '../components/calendar/Calendar';
 import { Contact } from '../components/Contact';
 import { Gallery } from '../components/gallery/Gallery';
-import { Portfolio } from '../components/Portfolio';
+import { Portfolio } from '../components/portfolio/Portfolio';
 import { Bio } from '../components/Bio';
 
 

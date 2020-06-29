@@ -1,25 +1,31 @@
-.portfolio-gallery {
-  display: flex;
-  justify-content: center;
-
-  figure {
-    padding: 1rem;
-
-    img {
-      margin-bottom: 1rem;
+.portfolio {
+  &__title {
+    @include sectionName;
+  }
+  .single-show-photos {
+    .photo-container {
+      height: 100%;
+      overflow: hidden;
+      margin: 2px;
     }
-
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .portfolio-gallery {
-    figure {
-      padding: 3rem;
+  .gallery-section-name {
+    @include sectionNameDesktop;
+  }
+  .main__container.gallery {
+    padding: 7rem 2rem;
+  }
+}
 
-      figcaption {
-        font-size: 1.4rem;
-      }
-    }
+@media only screen and (min-width: 1024px) {
+  .main__container.gallery {
+    width: 50%;
+    margin: 0 35%;
+  }
+  .gallery__photo {
+    overflow: hidden;
   }
 }
