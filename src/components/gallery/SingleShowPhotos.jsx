@@ -1,12 +1,16 @@
 import React, { useState, useCallback } from "react";
-import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
+import {
+  Row,
+  Col,
+  Figure,
+} from 'react-bootstrap';
 
 export function SingleShowPhotos(props) {
     const [currentImage, setCurrentImage] = useState(0);
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
-    const openLightbox = useCallback((event, { photo, index }) => {
+    const openLightbox = useCallback((index) => {
         setCurrentImage(index);
         setViewerIsOpen(true);
     }, []);
@@ -22,8 +26,23 @@ export function SingleShowPhotos(props) {
 
     return (
         <div className='single-show-photos'>
-            <h4 className="section-name-heading">{images.title}</h4>
-            <Gallery photos={images.photos} onClick={openLightbox} />
+            <h4 className="single-show-photos__title">{images.title}</h4>
+            <Row noGutters xs={2} md={3} lg={4}>
+              {images.photos.map((photo, index) => (
+                <Col {...photo.sizes} key={photo.src}>
+                  <Figure className='photo-container'>
+                    <Figure.Image
+                      src={photo.src}
+                      onClick={() => openLightbox(index)}
+                    />
+                    <Figure.Caption>
+                      {photo.caption}
+                    </Figure.Caption>
+                  </Figure>
+                </Col>
+              ))}
+            </Row>
+            {/*<Gallery photos={images.photos} onClick={openLightbox} />*/}
             <ModalGateway>
                 {viewerIsOpen ? (
                   <Modal onClose={closeLightbox}>

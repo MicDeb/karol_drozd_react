@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import { SingleShowPhotos } from './SingleShowPhotos';
 import {
     rockOfAgesPhoto,
@@ -14,52 +13,49 @@ import {
 
 export function Gallery() {
     return (
-        <div className="main-container gallery-page">
-            <h2 className="main-gallery-title">Karol Drozd - Galeria</h2>
-            <div className="gallery">
-                <h3 className="gallery-section-name">GALERIA</h3>
+        <div className="main-container gallery">
+            <h3 className="gallery__title">GALERIA</h3>
 
-                <Container>
-                    {/*Rock of Ages*/}
-                    <SingleShowPhotos
-                        images={rockOfAgesPhoto}
-                    />
+            <div>
+                {/*Rock of Ages*/}
+                <SingleShowPhotos
+                    images={rockOfAgesPhoto}
+                />
 
-                    {/*Opera za Trzy grosze*/}
-                    <SingleShowPhotos
-                        images={operaZaTrzyGroszePhotos}
-                    />
+                {/*Opera za Trzy grosze*/}
+                <SingleShowPhotos
+                    images={operaZaTrzyGroszePhotos}
+                />
 
-                    {/*Crazy For You*/}
-                    <SingleShowPhotos
-                        images={crazyForYouPhotos}
-                    />
+                {/*Crazy For You*/}
+                <SingleShowPhotos
+                    images={crazyForYouPhotos}
+                />
 
-                    {/*Footloose*/}
-                    <SingleShowPhotos
-                        images={footloosePhotos}
-                    />
+                {/*Footloose*/}
+                <SingleShowPhotos
+                    images={footloosePhotos}
+                />
 
-                    {/*Rodzina Addamsów*/}
-                    <SingleShowPhotos
-                        images={addamsFamilyPhotos}
-                    />
+                {/*Rodzina Addamsów*/}
+                <SingleShowPhotos
+                    images={addamsFamilyPhotos}
+                />
 
-                    {/*GRIMM*/}
-                    <SingleShowPhotos
-                        images={grimmPhotos}
-                    />
+                {/*GRIMM*/}
+                <SingleShowPhotos
+                    images={grimmPhotos}
+                />
 
-                    {/*Love Story*/}
-                    <SingleShowPhotos
-                        images={loveStoryPhotos}
-                    />
+                {/*Love Story*/}
+                <SingleShowPhotos
+                    images={loveStoryPhotos}
+                />
 
-                    {/*FAME*/}
-                    <SingleShowPhotos
-                        images={famePhotos}
-                    />
-                </Container>
+                {/*FAME*/}
+                <SingleShowPhotos
+                    images={famePhotos}
+                />
             </div>
         </div>
     )
