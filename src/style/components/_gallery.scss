@@ -2,49 +2,19 @@
   &__title {
     @include sectionName;
   }
+}
 
-  .single-show-photos {
-    margin-bottom: 6rem;
-
+@include respond-to($tablet) {
+  .gallery {
     &__title {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 2.5rem;
-      padding-bottom: 1.5rem;
-      @include borderBottom;
-    }
-
-    .photo-container {
-      height: 100%;
-      overflow: hidden;
-      margin: 2px;
+      @include sectionNameDesktop;
     }
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .gallery-section-name {
-    @include sectionNameDesktop;
+@include respond-to($desktop) {
+  .gallery {
+    &__title {
+    }
   }
-  .main__container.gallery {
-    padding: 7rem 2rem;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .main__container.gallery {
-    width: 50%;
-    margin: 0 35%;
-  }
-  .gallery__photo {
-    overflow: hidden;
-  }
-}
-
-.imageEffectOnEnter {
-  animation: imageEffectIn 1s forwards;
-}
-
-.imageEffectOnLeave {
-  animation: imageEffectOut 1s forwards;
 }

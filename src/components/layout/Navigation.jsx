@@ -54,7 +54,6 @@ export function Navigation() {
 
     return (
         <header className="header">
-            <h1>Karol Drozd</h1>
             <div className="header__container">
                 <div className="page-logo">
                     <strong className="page-logo__title">Karol Drozd</strong>

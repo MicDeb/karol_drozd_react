@@ -1,0 +1,48 @@
+.single-show-photos {
+  margin-bottom: 6rem;
+
+  &__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    @include borderBottom;
+  }
+
+  .photo-container {
+    height: 100%;
+    overflow: hidden;
+    margin: 6px;
+
+    img {
+      height: auto;
+      width: 100%;
+      max-width: none;
+    }
+
+    figcaption {
+      font-size: 80%;
+    }
+  }
+}
+
+@include respond-to($tablet) {
+  .single-show-photos {
+    &__title {
+      font-size: 2.6rem;
+    }
+    .photo-container {
+    }
+  }
+}
+
+@include respond-to($desktop) {
+  .single-show-photos {
+    &__title {
+
+    }
+    .photo-container {
+
+    }
+  }
+}

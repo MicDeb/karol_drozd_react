@@ -1,48 +1,61 @@
 import React, { useState, useCallback } from "react";
+import PropTypes from 'prop-types';
 import Carousel, { Modal, ModalGateway } from "react-images";
 import {
   Row,
   Col,
-  Figure,
 } from 'react-bootstrap';
 
 export function SingleShowPhotos(props) {
     const [currentImage, setCurrentImage] = useState(0);
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
+    const rootElement = document.getElementById('root');
 
     const openLightbox = useCallback((index) => {
-        setCurrentImage(index);
-        setViewerIsOpen(true);
-    }, []);
+      setCurrentImage(index);
+      setViewerIsOpen(true);
+      rootElement.classList.add('modal-visible');
+    }, [rootElement.classList]);
 
-    const closeLightbox = () => {
-        setCurrentImage(0);
-        setViewerIsOpen(false);
-    };
+    const closeLightbox = useCallback(() => {
+      setCurrentImage(0);
+      setViewerIsOpen(false);
+      rootElement.classList.remove('modal-visible');
+    }, [rootElement.classList]);
 
     const {
-        images
+      images,
+      withPhotosTitle,
+      withFigcaption,
     } = props;
 
     return (
         <div className='single-show-photos'>
-            <h4 className="single-show-photos__title">{images.title}</h4>
-            <Row noGutters xs={2} md={3} lg={4}>
+          {withPhotosTitle
+            && (
+              <h4 className="single-show-photos__title">{images.title}</h4>
+            )
+          }
+            <Row noGutters>
               {images.photos.map((photo, index) => (
                 <Col {...photo.sizes} key={photo.src}>
-                  <Figure className='photo-container'>
-                    <Figure.Image
+                  <figure className='photo-container'>
+                    <img
                       src={photo.src}
                       onClick={() => openLightbox(index)}
                     />
-                    <Figure.Caption>
-                      {photo.caption}
-                    </Figure.Caption>
-                  </Figure>
+                    {withFigcaption
+                      && (
+                        <figcaption>
+                          {photo.caption}
+                        </figcaption>
+                      )
+                    }
+
+                  </figure>
                 </Col>
               ))}
             </Row>
-            {/*<Gallery photos={images.photos} onClick={openLightbox} />*/}
             <ModalGateway>
                 {viewerIsOpen ? (
                   <Modal onClose={closeLightbox}>
@@ -60,4 +73,14 @@ export function SingleShowPhotos(props) {
             </ModalGateway>
         </div>
     )
+}
+
+SingleShowPhotos.defaultProps = {
+  withPhotosTitle: true,
+  withFigcaption: true,
+}
+
+SingleShowPhotos.propTypes = {
+  withPhotosTitle: PropTypes.bool,
+  withFigcaption: PropTypes.bool,
 }

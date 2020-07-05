@@ -56,19 +56,24 @@ a {
   color: $fontColor;
 }
 
-//img {
-// @include circuit;
-//}
-
 strong {
   font-weight: $light;
 }
 
+figure, img {
+  margin: 0;
+}
+
+@include respond-to($tablet) {
+  .main {
+    padding-top: 9rem;
+  }
+}
 
 @media screen and (min-aspect-ratio: 13/9) and (max-width: 1023px) {
-  #root {
+  #root:not(.modal-visible), {
     > * {
-      display: none;
+      display: none!important;
     }
     position: relative;
     &:before {

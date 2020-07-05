@@ -45,13 +45,16 @@
   }
 }
 
-@media only screen and ($tablet) {
+@include respond-to($tablet) {
   .header {
-    &__container {
-      padding: 3rem 5rem;
+    padding: 2rem;
+    height: 9rem;
 
+    &__container {
       .page-logo {
-        font-size: 4rem;
+        &__title {
+          font-size: 4rem;
+        }
 
         &__professions {
           &--item {
@@ -63,8 +66,28 @@
   }
 }
 
+//@include respond-to($desktop) {
+//  .header {
+//    &__container {
+//      padding: 3rem 5rem;
+//
+//      .page-logo {
+//        &__title {
+//          font-size: 4rem;
+//        }
+//
+//        &__professions {
+//          &--item {
+//            font-size: 2rem;
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
 
-@media only screen and ($desktop) {
+
+@include respond-to($desktop) {
   .header {
     width: auto;
     height: 100vh;

@@ -18,7 +18,7 @@ export function Figure(props) {
                 alt={imageAlt}
             />
             {figcaption && (
-                <figcaption className="gallery__photo--figcaption">
+                <figcaption>
                     {figcaption}
                 </figcaption>
             )}

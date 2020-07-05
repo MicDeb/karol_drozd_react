@@ -32,7 +32,7 @@
 
 }
 
-@media only screen and (min-width: 768px) {
+@include respond-to($tablet) {
   .biography {
     padding: 7rem 2rem;
 
@@ -54,7 +54,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@include respond-to($desktop) {
   .biography {
     width: 50%;
     margin: 0 35%;

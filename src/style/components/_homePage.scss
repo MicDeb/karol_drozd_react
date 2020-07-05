@@ -9,6 +9,7 @@
       height: 100%;
       width: 100vw;
       overflow: hidden;
+      @include flex-center;
 
       &--item {
         height: 100%;
@@ -19,25 +20,21 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@include respond-to($tablet) {
   .home-page {
-    .main__figure {
-      padding-bottom: 5rem;
-      width: 90%;
-      height: auto;
-      margin: 0 auto;
-    }
-    .main__figure--img {
-      padding-bottom: 4rem;
-    }
-    .main__continer--arrow {
-      top: 87vh;
-      right: 5rem;
+    height: calc(100vh - 9rem);
+    .landscape-container {
+      .main__figure {
+        &--item {
+          height: auto;
+          width: 100%;
+        }
+      }
     }
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@include respond-to($desktop) {
   .home-page {
     width: 100%;
     height: 100vh;

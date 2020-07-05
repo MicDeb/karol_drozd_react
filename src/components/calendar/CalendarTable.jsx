@@ -111,7 +111,7 @@ export function CalendarTable(props) {
                               <Container key={event.day + dayEvent.time} className='day-events'>
                                   <Row>
                                       <Col xs={2}>
-                                          <span>godz. {dayEvent.time}</span>
+                                          <span className='event-hour'>godz. {dayEvent.time}</span>
                                       </Col>
                                       <Col xs={6} className={`${hasSeparator ? 'separate' : ''}`}>
                                           <p className='event-title'>{dayEvent.title}</p>

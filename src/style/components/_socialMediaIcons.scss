@@ -20,7 +20,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@include respond-to($desktop) {
   .social-media-container {
     width: auto;
     height: auto;
@@ -42,12 +42,6 @@
       transform: translateX(1rem);
       animation: borderSocialEffect 2s 2s forwards;
     }
-  }
-}
-
-@media only screen and (min-width: 1024px) and (min-height: 768px) {
-  .social-media-container {
-    bottom: 87%;
   }
 }
 

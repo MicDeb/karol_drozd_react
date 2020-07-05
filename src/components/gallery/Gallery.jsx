@@ -1,5 +1,5 @@
 import React from "react";
-import { SingleShowPhotos } from './SingleShowPhotos';
+import { SingleShowPhotos } from '../shared/SingleShowPhotos';
 import {
     rockOfAgesPhoto,
     operaZaTrzyGroszePhotos,

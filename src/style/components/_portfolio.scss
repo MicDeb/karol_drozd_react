@@ -2,30 +2,15 @@
   &__title {
     @include sectionName;
   }
-  .single-show-photos {
-    .photo-container {
-      height: 100%;
-      overflow: hidden;
-      margin: 2px;
+}
+
+@include respond-to($tablet) {
+  .portfolio {
+    &__title {
+      @include sectionNameDesktop;
     }
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .gallery-section-name {
-    @include sectionNameDesktop;
-  }
-  .main__container.gallery {
-    padding: 7rem 2rem;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .main__container.gallery {
-    width: 50%;
-    margin: 0 35%;
-  }
-  .gallery__photo {
-    overflow: hidden;
-  }
+@include respond-to($desktop) {
 }
