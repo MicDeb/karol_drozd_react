@@ -1,113 +1,72 @@
-.calendar-table {
-  table-layout: initial;
-  font-size: 1.3rem;
-  font-weight: $light;
-  @include circuit;
-}
-
-.calendar-table__caption {
-  font-size: 3rem;
-}
-
-.calendar-table__body--mounth {
-  font-size: 2rem;
-  display: block;
-  margin: 2rem 0;
-  th {
-    font-weight: $light;
-    @include circuit;
-    text-align: left;
+.calendar {
+  margin-bottom: 2.5rem;
+  &__title {
+    @include sectionName;
   }
-}
 
-.calendar-table__body--event {
-  td {
-    text-align: center;
-  }
-}
-
-.calendar-table__body--title {
-  text-align: center;
-}
-
-.calendar-table__body--place {
-  text-align: center;
-}
-
-td {
-  padding-bottom: 2rem;
-  padding-top: 2rem;
-}
-
-.even {
-   background-color: #2B2A2B;
-   a {
-     border-bottom: thin solid $borderColor;
-   }
-}
-
-.odd {
-  color: $fontColor;
-  background-color: #2B2A2B;
-  a {
-    border-bottom: thin solid $borderColor;
-  }
-}
-
-.calendar-figure {
-  margin-top: 3rem;
-  @include circuit;
-  .calendar-figure--image {
-    @include circuit;
-  }
-  .calendar-figure--caption {
-    text-align: center;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .main__container.calendar {
-    padding: 7rem 2rem;
-  }
-  .calendar-table {
+  &__year {
     font-size: 2rem;
+    margin-bottom: 1rem;
   }
 
-  .calendar-table__caption {
-    @include sectionNameDesktop;
-  }
-
-  .calendar-table__body--mounth {
-    font-size: 3rem;
-    display: block;
-    margin: 3rem 0;
-    th {
-      font-weight: $light;
-      @include circuit;
-      text-align: left;
+  &__pagination {
+    @include flex-center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    @include borderBottom;
+    p {
+      margin-bottom: 0;
+      font-size: 2rem;
+      width: 150px;
     }
   }
-}
 
-@media only screen and (min-width: 1024px) {
-  .main__container.calendar {
-    width: 50%;
-    margin: 0 35%;
-  }
-  .calendar-table {
-    font-size: 1.6rem;
-  }
+  &__single-event {
+    @include borderBottom;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 
-  .calendar-table__body--mounth {
-    width: 200%;
-  }
+    &--day {
+      margin-bottom: 1rem;
 
-  .calendar-table__body--place {
-    a {
-      color: #B48E3C;
+      .day-date {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+
+      .day-name {
+        font-weight: bold;
+      }
     }
-    a:hover {
-      color: $fontColor;
+
+    .day-events {
+      margin-bottom: .6rem;
+      [class*=col-] {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+      .event-title {
+        font-weight: 600;
+        font-size: 1.6rem;
+        text-align: center;
+      }
+
+      .event-place {
+        text-decoration: underline;
+      }
+
+      .separate {
+        @include borderBottom;
+        padding-bottom: .6rem;
+      }
     }
   }
 }
