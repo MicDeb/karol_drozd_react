@@ -6,11 +6,12 @@
 
 @include respond-to($tablet) {
   .portfolio {
+    padding: 7rem 2rem;
     &__title {
       @include sectionNameDesktop;
     }
   }
 }
 
-@include respond-to($desktop) {
+@include respond-to($sm-desktop) {
 }

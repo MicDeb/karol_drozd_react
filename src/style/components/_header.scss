@@ -5,6 +5,7 @@
   position: fixed;
   z-index: 2;
   top: 0;
+  left: 0;
   padding: 1rem 2rem;
 
   &__container {
@@ -66,49 +67,33 @@
   }
 }
 
-//@include respond-to($desktop) {
-//  .header {
-//    &__container {
-//      padding: 3rem 5rem;
-//
-//      .page-logo {
-//        &__title {
-//          font-size: 4rem;
-//        }
-//
-//        &__professions {
-//          &--item {
-//            font-size: 2rem;
-//          }
-//        }
-//      }
-//    }
-//  }
-//}
 
-
-@include respond-to($desktop) {
+@include respond-to($sm-desktop) {
   .header {
-    width: auto;
     height: 100vh;
-    position: fixed;
     z-index: 2;
-    top: 0;
-    left: 0;
     text-align: left;
     border-right: 0.1rem solid $borderColor;
+    width: 28%;
+    max-width: 330px;
+    padding: 7rem 2rem;
 
     &__container {
       width: auto;
       height: auto;
-      padding: 5rem;
+      flex-direction: column;
+      align-items: center;
 
       .page-logo {
         border-bottom: 0.1rem solid $borderColor;
+        height: auto;
+        width: 100%;
+        max-width: 230px;
 
-        &__proffesions {
+        &__professions {
           width: 100%;
           height: auto;
+          margin-top: .5rem;
 
           &--item {
             font-size: 1.8rem;
@@ -116,5 +101,15 @@
         }
       }
     }
+
+    &__line {
+      width: 300px;
+      height: 1px;
+      background: $borderColor;
+      position: absolute;
+      bottom: 15%;
+      right: -10%;
+    }
   }
 }
+

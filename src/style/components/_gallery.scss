@@ -6,13 +6,14 @@
 
 @include respond-to($tablet) {
   .gallery {
+    padding: 7rem 2rem;
     &__title {
       @include sectionNameDesktop;
     }
   }
 }
 
-@include respond-to($desktop) {
+@include respond-to($sm-desktop) {
   .gallery {
     &__title {
     }

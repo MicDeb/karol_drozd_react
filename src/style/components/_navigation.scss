@@ -17,6 +17,8 @@
       padding: 1rem 0;
       a:hover {
         color: #ada9ad;
+        border-bottom: 0.1rem solid #444244;
+        text-decoration: none;
       }
     }
   }
@@ -36,47 +38,52 @@
   display: block;
 }
 
-@include respond-to($desktop) {
-  .main-navigation__hamburger {
-    display: none;
-  }
-  .main-navigation__list {
-    display: block;
-    width: 0;
-    height: auto;
-    font-size: 2rem;
-    background-color: transparent;
-    text-align: left;
-    padding: 7rem 0;
-    margin-left: 5rem;
-    border-bottom: 0.1rem solid $borderColor;
-    transform: translate3d(0, 0, 0);
-    animation: borderNavigationEffect 3s forwards,
-                navigationEffect 1.5s forwards;
-  }
-  .main-navigation__list--item {
-    padding-bottom: 2.5rem;
-  }
-  .main-navigation__list--item:nth-child(1) {
-    animation: navigationEffect 2s forwards;
-  }
-  .main-navigation__list--item:nth-child(2) {
-    animation: navigationEffect 2.1s forwards;
-  }
-  .main-navigation__list--item:nth-child(3) {
-    animation: navigationEffect 2.2s forwards;
-  }
-  .main-navigation__list--item:nth-child(4) {
-    animation: navigationEffect 2.3s forwards;
-  }
-  .main-navigation__list--item:nth-child(5) {
-    animation: navigationEffect 2.4s forwards;
+@include respond-to($sm-desktop) {
+  .main-navigation {
+    width: 100%;
+    max-width: 230px;
+
+    &__hamburger {
+      display: none;
+    }
+
+    &__list {
+      display: block;
+      position: relative;
+      width: auto;
+      height: auto;
+      font-size: 2rem;
+      background-color: transparent;
+      text-align: left;
+      transform: translate3d(0, 0, 0);
+      animation: borderNavigationEffect 3s forwards,
+      navigationEffect 1.5s forwards;
+
+      &--item {
+        padding-bottom: 2.5rem;
+
+        &:nth-child(1) {
+          animation: navigationEffect 2s forwards;
+        }
+        &:nth-child(2) {
+          animation: navigationEffect 2.1s forwards;
+        }
+        &:nth-child(3) {
+          animation: navigationEffect 2.2s forwards;
+        }
+        &:nth-child(4) {
+          animation: navigationEffect 2.3s forwards;
+        }
+        &:nth-child(5) {
+          animation: navigationEffect 2.4s forwards;
+        }
+      }
+    }
   }
 }
 
-@media only screen and (min-width: 1400px) {
+@include respond-to ($xl-desktop) {
   .main-navigation__list {
     font-size: 2.7rem;
-    padding: 20rem 0;
   }
 }

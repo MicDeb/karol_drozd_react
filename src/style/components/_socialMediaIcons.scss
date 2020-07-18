@@ -14,39 +14,29 @@
     height: auto;
     margin: 0 auto;
   }
-
-  .line {
-    display: none;
-  }
 }
 
-@include respond-to($desktop) {
+@include respond-to($sm-desktop) {
   .social-media-container {
     width: auto;
-    height: auto;
-    bottom: 85%;
+    height: 5rem;
     top: 6%;
     right: 2%;
     animation: socialMediaEffect 3s forwards;
 
     .social-media-icon {
-      width: 5.5rem;
+      width: 4rem;
       height: auto;
-      padding: 1rem 0 0.2rem 2rem;
+      padding: 1rem;
     }
     .line {
-      width: auto;
-      border-left: 0.15rem solid $borderColor;
+      width: 1px;
+      height: 20px;
+      background-color: $borderColor;
       position: absolute;
-      top: 20%;
-      transform: translateX(1rem);
+      top: 10%;
+      left: 6%;
       animation: borderSocialEffect 2s 2s forwards;
     }
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-  .line {
-    top: 30%;
   }
 }

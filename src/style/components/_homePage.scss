@@ -34,23 +34,21 @@
   }
 }
 
-@include respond-to($desktop) {
+@include respond-to($sm-desktop) {
   .home-page {
     width: 100%;
     height: 100vh;
-    padding-top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
     background-image: url(../../images/background2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right;
+    background-position: center;
     opacity: 0.01;
     animation: backgroudEffect 7s forwards;
-  }
 
-  .main__continer--arrow {
-    display: none;
+    .landscape-container {
+      .main__figure {
+        display: none;
+      }
+    }
   }
 }

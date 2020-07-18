@@ -72,6 +72,7 @@
 
 @include respond-to($tablet) {
   .calendar {
+    padding: 7rem 2rem;
     &__title {
       @include sectionNameDesktop;
     }

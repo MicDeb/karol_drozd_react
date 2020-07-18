@@ -54,11 +54,8 @@
   }
 }
 
-@include respond-to($desktop) {
+@include respond-to($sm-desktop) {
   .biography {
-    width: 50%;
-    margin: 0 35%;
-
     &__paragraph {
       width: 100%;
       font-size: 1.6rem;

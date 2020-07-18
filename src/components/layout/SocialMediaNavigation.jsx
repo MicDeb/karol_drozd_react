@@ -21,6 +21,7 @@ const socialMediaNavItems = [
 export function SocialMediaNavigation() {
   return (
     <div className="social-media-container">
+      <div className="line"></div>
       {socialMediaNavItems.map((item) => (
         <a href={item.href} key={item.href}>
           <img
@@ -30,7 +31,6 @@ export function SocialMediaNavigation() {
           />
         </a>
       ))}
-      <div className="line"></div>
     </div>
   )
 }

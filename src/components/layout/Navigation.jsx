@@ -89,6 +89,7 @@ export function Navigation() {
                     </ul>
                 </nav>
             </div>
+            <div className='header__line' />
         </header>
     );
 }

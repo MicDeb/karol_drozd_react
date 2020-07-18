@@ -13,6 +13,7 @@
     height: 100%;
     overflow: hidden;
     margin: 6px;
+    cursor: pointer;
 
     img {
       height: auto;
@@ -36,7 +37,7 @@
   }
 }
 
-@include respond-to($desktop) {
+@include respond-to($sm-desktop) {
   .single-show-photos {
     &__title {
 

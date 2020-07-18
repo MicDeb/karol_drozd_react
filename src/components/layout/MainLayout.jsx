@@ -9,13 +9,14 @@ export function MainLayout(props) {
     } = props;
 
     return (
-        <>
-            <Navigation parent={scene.props.parent} />
-            <div className='main'>
-                {scene}
-            </div>
+      <>
+        <Navigation parent={scene.props.parent} />
 
-            <SocialMediaNavigation />
-        </>
+        <div className='main'>
+          {scene}
+        </div>
+
+        <SocialMediaNavigation />
+      </>
     );
 }
