@@ -72,10 +72,8 @@ export function Bio() {
                 />
 
                 <p className="biography__paragraph">
-                    Absolwent <strong>Akademii Muzycznej im. Stanisława Moniuszki w Gdańsku</strong> na specjalności
-                    musical.
+                    Absolwent Akademii Muzycznnej im. Stanisława Moniuszki w Gdańsku na studiach drugiego stopnia o specjalności musical.
                     Swój warsztat wokalny kształcił pod okiem prof. zw. dra hab. Ryszarda Minkiewicza.
-                    Studia muzyczne pierwszego stopnia ukończył z wyróżnieniem.
                 </p>
                 <p className="biography__paragraph">
                     Aktor scen musicalowych w Polsce i za granicą.

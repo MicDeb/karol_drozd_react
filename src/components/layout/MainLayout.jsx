@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navigation } from './Navigation';
 import { SocialMediaNavigation } from './SocialMediaNavigation';
+import clsx from "clsx";
 
 
 export function MainLayout(props) {
@@ -8,11 +9,18 @@ export function MainLayout(props) {
         children: scene,
     } = props;
 
+    console.log('this.props', scene.props.location.pathname)
+
+    let mainClass = 'main';
+    if (scene.props.location.pathname === '/') {
+        mainClass = clsx(mainClass, 'main-home');
+    }
+
     return (
       <>
         <Navigation parent={scene.props.parent} />
 
-        <div className='main'>
+        <div className={mainClass}>
           {scene}
         </div>
 
