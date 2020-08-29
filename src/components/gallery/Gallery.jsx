@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 import { SingleShowPhotos } from '../shared/SingleShowPhotos';
 import {
     rockOfAgesPhoto,
@@ -13,50 +14,56 @@ import {
 
 export function Gallery() {
     return (
-        <div className="main-container gallery">
-            <h3 className="gallery__title">GALERIA</h3>
+      <>
+          <Helmet>
+              <title>GALERIA | Karol Drozd</title>
+          </Helmet>
 
-            <div>
-                {/*Rock of Ages*/}
-                <SingleShowPhotos
+          <div className="main-container gallery">
+              <h3 className="gallery__title">GALERIA</h3>
+
+              <div>
+                  {/*Rock of Ages*/}
+                  <SingleShowPhotos
                     images={rockOfAgesPhoto}
-                />
+                  />
 
-                {/*Opera za Trzy grosze*/}
-                <SingleShowPhotos
+                  {/*Opera za Trzy grosze*/}
+                  <SingleShowPhotos
                     images={operaZaTrzyGroszePhotos}
-                />
+                  />
 
-                {/*Crazy For You*/}
-                <SingleShowPhotos
+                  {/*Crazy For You*/}
+                  <SingleShowPhotos
                     images={crazyForYouPhotos}
-                />
+                  />
 
-                {/*Footloose*/}
-                <SingleShowPhotos
+                  {/*Footloose*/}
+                  <SingleShowPhotos
                     images={footloosePhotos}
-                />
+                  />
 
-                {/*Rodzina Addamsów*/}
-                <SingleShowPhotos
+                  {/*Rodzina Addamsów*/}
+                  <SingleShowPhotos
                     images={addamsFamilyPhotos}
-                />
+                  />
 
-                {/*GRIMM*/}
-                <SingleShowPhotos
+                  {/*GRIMM*/}
+                  <SingleShowPhotos
                     images={grimmPhotos}
-                />
+                  />
 
-                {/*Love Story*/}
-                <SingleShowPhotos
+                  {/*Love Story*/}
+                  <SingleShowPhotos
                     images={loveStoryPhotos}
-                />
+                  />
 
-                {/*FAME*/}
-                <SingleShowPhotos
+                  {/*FAME*/}
+                  <SingleShowPhotos
                     images={famePhotos}
-                />
-            </div>
-        </div>
-    )
+                  />
+              </div>
+          </div>
+      </>
+    );
 }

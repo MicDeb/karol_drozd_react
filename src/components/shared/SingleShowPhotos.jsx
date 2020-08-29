@@ -43,6 +43,7 @@ export function SingleShowPhotos(props) {
                     <img
                       src={photo.src}
                       onClick={() => openLightbox(index)}
+                      alt={photo.alt}
                     />
                     {withFigcaption
                       && (

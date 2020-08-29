@@ -1,11 +1,17 @@
-import React, { useCallback, useState } from "react";
+import React from "react";
+import Helmet from "react-helmet";
 import { portfolioPhotos } from "./photos";
 import { SingleShowPhotos } from '../shared/SingleShowPhotos';
 
 
 export function Portfolio() {
     return (
-      <div className="main-container portfolio">
+      <>
+        <Helmet>
+          <title>PORTFOLIO | Karol Drozd</title>
+        </Helmet>
+
+        <div className="main-container portfolio">
           <h3 className="portfolio__title">PORTFOLIO</h3>
 
           <SingleShowPhotos
@@ -13,6 +19,7 @@ export function Portfolio() {
             withPhotosTitle={false}
             withFigcaption={false}
           />
-      </div>
+        </div>
+      </>
     )
 }

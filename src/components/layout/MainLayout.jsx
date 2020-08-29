@@ -9,8 +9,6 @@ export function MainLayout(props) {
         children: scene,
     } = props;
 
-    console.log('this.props', scene.props.location.pathname)
-
     let mainClass = 'main';
     if (scene.props.location.pathname === '/') {
         mainClass = clsx(mainClass, 'main-home');
