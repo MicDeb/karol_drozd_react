@@ -1,14 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
 
-export default function (props) {
+export default function AppRoute(props) {
   const {
     component: Scene,
     layout: Layout,
-    hideNavigation,
     parent,
-    adminPage,
-    location,
     ...routeProps
   } = props;
 
@@ -33,3 +31,9 @@ export default function (props) {
     />
   );
 }
+
+AppRoute.propTypes = {
+  component: PropTypes.any.isRequired,
+  layout: PropTypes.func.isRequired,
+  parent: PropTypes.string.isRequired,
+};
